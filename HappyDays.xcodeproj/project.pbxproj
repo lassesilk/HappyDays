@@ -13,6 +13,10 @@
 		C4B166BF24707B81005CEC63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B166BD24707B81005CEC63 /* Main.storyboard */; };
 		C4B166C124707B88005CEC63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B166C024707B88005CEC63 /* Assets.xcassets */; };
 		C4B166C424707B88005CEC63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B166C224707B88005CEC63 /* LaunchScreen.storyboard */; };
+		C4B166CD24707F84005CEC63 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B166CC24707F84005CEC63 /* UIView+Layout.swift */; };
+		C4B166CF2470813D005CEC63 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B166CE2470813D005CEC63 /* MainCollectionViewController.swift */; };
+		C4B166D12470818A005CEC63 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B166D02470818A005CEC63 /* MemoryCell.swift */; };
+		C4B166D32477EF35005CEC63 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B166D22477EF35005CEC63 /* AlertService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C4B166C024707B88005CEC63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4B166C324707B88005CEC63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4B166C524707B88005CEC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B166CC24707F84005CEC63 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		C4B166CE2470813D005CEC63 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		C4B166D02470818A005CEC63 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
+		C4B166D22477EF35005CEC63 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		C4B166B624707B81005CEC63 /* HappyDays */ = {
 			isa = PBXGroup;
 			children = (
+				C4B166CB24707F57005CEC63 /* Helper */,
 				C4B166B724707B81005CEC63 /* AppDelegate.swift */,
 				C4B166B924707B81005CEC63 /* SceneDelegate.swift */,
 				C4B166BB24707B81005CEC63 /* ViewController.swift */,
+				C4B166CE2470813D005CEC63 /* MainCollectionViewController.swift */,
+				C4B166D02470818A005CEC63 /* MemoryCell.swift */,
 				C4B166BD24707B81005CEC63 /* Main.storyboard */,
 				C4B166C024707B88005CEC63 /* Assets.xcassets */,
 				C4B166C224707B88005CEC63 /* LaunchScreen.storyboard */,
 				C4B166C524707B88005CEC63 /* Info.plist */,
 			);
 			path = HappyDays;
+			sourceTree = "<group>";
+		};
+		C4B166CB24707F57005CEC63 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C4B166CC24707F84005CEC63 /* UIView+Layout.swift */,
+				C4B166D22477EF35005CEC63 /* AlertService.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B166CD24707F84005CEC63 /* UIView+Layout.swift in Sources */,
+				C4B166CF2470813D005CEC63 /* MainCollectionViewController.swift in Sources */,
+				C4B166D32477EF35005CEC63 /* AlertService.swift in Sources */,
 				C4B166BC24707B81005CEC63 /* ViewController.swift in Sources */,
 				C4B166B824707B81005CEC63 /* AppDelegate.swift in Sources */,
+				C4B166D12470818A005CEC63 /* MemoryCell.swift in Sources */,
 				C4B166BA24707B81005CEC63 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PPL8837AU;
 				INFOPLIST_FILE = HappyDays/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +319,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lassesilkoset.HappyDays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PPL8837AU;
 				INFOPLIST_FILE = HappyDays/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lassesilkoset.HappyDays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
